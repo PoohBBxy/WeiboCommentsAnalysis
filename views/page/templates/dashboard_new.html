@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>新版仪表盘</title>
+  <link rel="stylesheet" href="/static/css/backend-plugin.min.css">
+  <link rel="stylesheet" href="/static/css/backend.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
+  <link rel="stylesheet" href="https://unpkg.com/element-plus/theme-chalk/dark/css-vars.css" />
+  <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.6.0/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts-wordcloud@2.1.0/dist/echarts-wordcloud.min.js"></script>
+  <script src="/static/js/china.js"></script>
+  <style>
+    .kpi { font-weight: 700; font-size: 1.4rem; }
+    .chart-box { width: 100%; height: 380px; }
+  </style>
+</head>
+<body>
+<div id="loading"><div id="loading-center"></div></div>
+<div class="wrapper">
+  {% include 'components/sidebar.html' %}
+  <div class="iq-top-navbar"><div class="iq-navbar-custom">{% include 'components/top_navbar.html' %}</div></div>
+  <div class="content-page">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mb-3 mt-1 d-flex justify-content-between align-items-center">
+          <h4 class="font-weight-bold">新版仪表盘</h4>
+          <div>
+            {% if user_role == 'admin' or user_role == 'super_admin' %}
+            <button id="update-data-btn" class="btn btn-primary btn-sm mr-2">更新数据</button>
+            {% endif %}
+            <a href="/page/home" class="btn btn-outline-secondary btn-sm">切换到旧版</a>
+          </div>
+        </div>
+
+        <!-- KPI 区域 -->
+        <div class="col-12">
+          <el-row :gutter="16">
+            <el-col :md="8" :sm="24">
+              <el-card><div>文章总数 / 评论总数</div><div class="kpi"><span id="kpi-article">{{ home_data.article_count|default(0) }}</span> / <span id="kpi-comment">{{ home_data.comment_count|default(0) }}</span></div></el-card>
+            </el-col>
+            <el-col :md="8" :sm="24">
+              <el-card><div>最高点赞作者</div><div class="kpi" title="{{ home_data.top_author_name }}">{{ home_data.top_author_name }}</div></el-card>
+            </el-col>
+            <el-col :md="8" :sm="24">
+              <el-card><div>最活跃省份</div><div class="kpi" title="{{ home_data.most_common_city }}">{{ home_data.most_common_city }}</div></el-card>
+            </el-col>
+          </el-row>
+        </div>
+
+        <!-- 图表区 -->
+        <div class="col-12 mt-3">
+          <el-row :gutter="16">
+            <el-col :md="12" :sm="24"><el-card><template #header>情感分布</template><div id="chart-sentiment" class="chart-box"></div></el-card></el-col>
+            <el-col :md="12" :sm="24"><el-card><template #header>性别兴趣分布</template><div id="chart-gender" class="chart-box"></div></el-card></el-col>
+          </el-row>
+        </div>
+
+        <div class="col-12 mt-3">
+          <el-row :gutter="16">
+            <el-col :md="12" :sm="24"><el-card><template #header>中国省份活跃度</template><div id="chart-map" class="chart-box"></div></el-card></el-col>
+            <el-col :md="12" :sm="24"><el-card><template #header>热点词云</template><div id="chart-wordcloud" class="chart-box"></div></el-card></el-col>
+          </el-row>
+        </div>
+
+        <!-- 核心影响力用户（表格） -->
+        <div class="col-12 mt-3">
+          <el-card>
+            <template #header>核心影响力用户</template>
+            <el-table :data="keyUsers" style="width:100%">
+              <el-table-column prop="username" label="用户名" width="160" />
+              <el-table-column prop="followers" label="粉丝数" width="120" />
+              <el-table-column prop="likes" label="获赞数" width="120" />
+              <el-table-column prop="score" label="影响力得分" />
+            </el-table>
+          </el-card>
+        </div>
+      </div>
+      <!-- 公告弹窗（Element Plus） -->
+      <el-dialog v-model="popup.visible" :title="popup.data?.title" width="60%">
+        <div v-if="popup.data">
+          <p class="meta">发布者: [[ popup.data.author_username ]] | [[ popup.data.created_at_formatted ]]</p>
+          <el-divider />
+          <div class="prose" v-html="popup.data.content"></div>
+          <div v-if="popup.data.file_full_url" class="mt-3">
+            <el-divider />
+            <div class="mb-2">附件</div>
+            <a :href="popup.data.file_full_url" target="_blank" class="el-button el-button--primary el-button--small" role="button">
+              <span class="el-button__text">下载附件</span>
+            </a>
+          </div>
+        </div>
+        <template #footer>
+          <el-button @click="popup.visible=false">稍后提醒</el-button>
+          <el-button type="primary" @click="handlePopupRead">我已阅读</el-button>
+        </template>
+      </el-dialog>
+      {% include 'components/flash_message.html' %}
+    </div>
+  </div>
+</div>
+
+<script src="/static/js/backend-bundle.min.js"></script>
+<script src="/static/js/customizer.js"></script>
+<script src="/static/js/sidebar.js"></script>
+<script src="/static/js/app.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/element-plus/dist/index.full.js"></script>
+<script type="module" src="/static/js/pages/dashboard_new.js"></script>
+<script>
+  window.key_propagators = {{ key_propagators|tojson|safe }};
+</script>
+<script>
+  // Sync Element Plus dark mode with app's body class
+  (function () {
+    function syncDark() {
+      const isDark = document.body.classList.contains('dark');
+      document.documentElement.classList.toggle('dark', isDark);
+    }
+    syncDark();
+    const mo = new MutationObserver(syncDark);
+    mo.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  })();
+</script>
+</body>
+</html>

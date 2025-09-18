@@ -1,0 +1,243 @@
+<div id="legacy-sidebar" class="iq-sidebar sidebar-default">
+    <div class="iq-sidebar-logo d-flex align-items-end justify-content-between">
+        <a href="" class="header-logo">
+            <img src="/static/picture/logo.png" class="img-fluid rounded-normal light-logo" alt="logo">
+            <img src="/static/picture/logo-dark.png" class="img-fluid rounded-normal d-none sidebar-light-img" alt="logo">
+            <span>舆情数据分析平台</span>
+        </a>
+        <div class="side-menu-bt-sidebar-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-light wrapper-menu" width="30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </div>
+    </div>
+    <div class="data-scrollbar" data-scroll="1">
+        <nav class="iq-sidebar-menu">
+            <ul id="iq-sidebar-toggle" class="side-menu">
+                <li class="active sidebar-layout">
+                    <a href="/page/home" class="svg-icon">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                            </svg>
+                        </i>
+                        <span class="ml-2">仪表盘</span>
+                    </a>
+                </li>
+                <li class="px-3 pt-3 pb-2">
+                    <span class="text-uppercase small font-weight-bold" style="color:#e5ecff;">功能模块</span>
+                </li>
+                {% if user_role == 'admin' or user_role == 'super_admin' %}
+                <li class="sidebar-layout">
+                    <a href="#crawling" class="svg-icon" data-toggle="collapse" aria-expanded="true">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                            </svg>
+                        </i>
+                        <span class="ml-2">数据采集</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon iq-arrow-right arrow-active" width="15" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <ul id="crawling" class="submenu collapse show">
+                        <li class="sidebar-layout">
+                            <a href="{{ url_for('spider.manage_page') }}" class="svg-icon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                                    </svg>
+                                </i>
+                                <span>任务管理</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="{{ url_for('data.manage_page') }}" class="svg-icon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                                    </svg>
+                                </i>
+                                <span>数据源管理</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                {% endif %}
+                <li class="sidebar-layout">
+                    <a href="#analysis" class="svg-icon" data-toggle="collapse" aria-expanded="true">
+                        <i>
+                            <svg class="svg-icon" width="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path>
+                            </svg>
+                        </i>
+                        <span class="ml-2">数据分析</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon iq-arrow-right arrow-active" width="15" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <ul id="analysis" class="submenu collapse show">
+                        <li class="sidebar-layout">
+                            <a href="#" class="svg-icon coming-soon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M15 17h5l-1.405-4.215A2 2 0 0016.695 11H15V5a3 3 0 00-6 0v6H6.305a2 2 0 00-1.9 1.785L3 17h5m7 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                                    </svg>
+                                </i>
+                                <span>热门内容分析</span>
+                                <span class="badge badge-pill badge-secondary ml-auto">建设中</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="#" class="svg-icon coming-soon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                </i>
+                                <span>核心用户分析</span>
+                                <span class="badge badge-pill badge-secondary ml-auto">建设中</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="#" class="svg-icon coming-soon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </i>
+                                <span>情感倾向分析</span>
+                                <span class="badge badge-pill badge-secondary ml-auto">建设中</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="#" class="svg-icon coming-soon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                                    </svg>
+                                </i>
+                                <span>用户画像洞察</span>
+                                <span class="badge badge-pill badge-secondary ml-auto">建设中</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="#" class="svg-icon coming-soon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </i>
+                                <span>地域分布分析</span>
+                                <span class="badge badge-pill badge-secondary ml-auto">建设中</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="#" class="svg-icon coming-soon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                                    </svg>
+                                </i>
+                                <span>热点主题追踪</span>
+                                <span class="badge badge-pill badge-secondary ml-auto">建设中</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-layout">
+                    <a href="#announcement" class="svg-icon" data-toggle="collapse" aria-expanded="true">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-megaphone-fill" viewBox="0 0 16 16">
+                                <path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-11zm-1 .724c-2.067.95-4.539 1.481-7 1.656v6.237a25.222 25.222 0 0 1 1.088.085c2.053.204 4.038.64 5.912 1.56V3.224zM0 4.86c.048-.26.22-.483.475-.654.255-.17.58-.223.883-.15l3.633 1.09a.801.801 0 0 1 .593.745v5.425a.801.801 0 0 1-.593.745l-3.633 1.09a.801.801 0 0 1-.883-.15.799.799 0 0 1-.475-.654V4.86z"/>
+                            </svg>
+                        </i>
+                        <span class="ml-2">公告中心</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="svg-icon iq-arrow-right arrow-active" width="15" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <ul id="announcement" class="submenu collapse show">
+                        <li class="sidebar-layout">
+                            <a href="{{ url_for('announcement.system_announcements') }}" class="svg-icon">
+                                <i>
+                                    <svg class="icon line" width="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+                                    </svg>
+                                </i>
+                                <span>查看公告</span>
+                                <p id="unread-announcement-count" class="mb-0 w-10 badge badge-pill badge-primary unread-announcement-count" style="display:none;"></p>
+                            </a>
+                        </li>
+                        {% if user_role == 'admin' or user_role == 'super_admin' %}
+                        <li class="sidebar-layout">
+                            <a href="{{ url_for('announcement.manage_page') }}" class="svg-icon">
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 5h8M9 9h8M9 13h8M5 5h.01M5 9h.01M5 13h.01M16 17l2 2 4-4"/>
+                                    </svg>
+                                </i>
+                                <span>公告管理</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-layout">
+                            <a href="{{ url_for('announcement.publish_announcement') }}" class="svg-icon">
+                                <i>
+                                    <svg class="icon line" width="18" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                    </svg>
+                                </i>
+                                <span>发布公告</span>
+                            </a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </li>
+                <li class="px-3 pt-3 pb-2">
+                    <span class="text-uppercase small font-weight-bold" style="color:#e5ecff;">系统</span>
+                </li>
+                <li class="sidebar-layout">
+                    <a href="/user/profile" class="svg-icon">
+                        <i>
+                            <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </i>
+                        <span class="ml-2">个人中心</span>
+                    </a>
+                </li>
+                {% if user_role == 'admin' or user_role == 'super_admin' %}
+                <li class="sidebar-layout">
+                    <a href="{{ url_for('user_management.manage_page') }}" class="svg-icon">
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </i>
+                        <span class="ml-2">用户管理</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div class="pt-5 pb-5"></div>
+    </div>
+</div>

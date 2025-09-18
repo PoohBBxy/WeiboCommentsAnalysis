@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>{% block title %}舆情数据分析平台{% endblock %}</title>
+
+      <link rel="stylesheet" href="/static/css/backend-plugin.min.css">
+      <link rel="stylesheet" href="/static/css/backend.css">
+
+      {% block head_extra %}{% endblock %}
+
+      <style>
+            @font-face {
+               font-family: 'FZYueJJW';
+               src: url('/static/font/FZYueJJW.TTF') format('truetype');
+            }
+      </style>
+</head>
+  <body class="  ">
+    <div id="loading">
+          <div id="loading-center">
+          </div>
+    </div>
+    <div class="wrapper">
+      {% include 'components/sidebar.html' %}
+      <div class="iq-top-navbar">
+        <div class="iq-navbar-custom">
+            {% include 'components/top_navbar.html' %}
+        </div>
+      </div>
+
+      <div class="content-page">
+        <div class="container-fluid">
+            {% block content %}{% endblock %}
+
+            {% include 'components/flash_message.html' %}
+        </div>
+      </div>
+    </div>
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/element-plus/dist/index.full.global.prod.js"></script>
+    <script src="/static/js/backend-bundle.min.js"></script>
+    <script src="/static/js/app.js"></script>
+
+    {% block scripts_extra %}{% endblock %}
+  </body>
+</html>

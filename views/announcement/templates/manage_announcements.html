@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>公告管理 - 情感分析平台</title>
+    <link rel="stylesheet" href="/static/css/backend-plugin.min.css">
+    <link rel="stylesheet" href="/static/css/backend.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/theme-chalk/dark/css-vars.css" />
+    <style>
+        :root {
+            --bg-color: #f5f7fa; --card-bg-color: #ffffff;
+            --text-primary: #303133; --text-regular: #606266;
+            --border-color: #dcdfe6;
+        }
+        body.dark {
+            --bg-color: #16171B; --card-bg-color: #212226;
+            --text-primary: #e5e7eb; --text-regular: #9ca3af;
+            --border-color: #374151;
+        }
+        body { background-color: var(--bg-color); }
+        .content-page { background-color: var(--bg-color); }
+        .card { border-color: var(--border-color); background-color: var(--card-bg-color); }
+        h4, h5 { color: var(--text-primary); }
+        .el-table .el-button { margin-left: 5px; }
+        .reader-link { cursor: pointer; color: var(--el-color-primary); margin: 0 4px; }
+        .reader-link:hover { text-decoration: underline; }
+        .preview-content { max-height: 50vh; overflow-y: auto; word-break: break-word; }
+        .preview-content img { max-width: 100%; height: auto; }
+        .text-danger { color: #f56c6c; }
+        .mr-2 { margin-right: 8px; }
+    </style>
+</head>
+<body data-user-role="{{ user_role }}" data-user-id="{{ current_user.id }}">
+    <div id="loading"><div id="loading-center"></div></div>
+    <div class="wrapper">
+        {% include 'components/sidebar.html' %}
+        <div class="iq-top-navbar"><div class="iq-navbar-custom">{% include 'components/top_navbar.html' %}</div></div>
+        <div class="content-page">
+            <div class="container-fluid">
+                <div class="row"><div class="col-lg-12"><div class="d-flex flex-wrap align-items-center justify-content-between mb-4"><div><h4 class="mb-3">公告管理</h4></div></div></div></div>
+                <div id="announcement-management-app">
+                    <el-card class="box-card">
+                         <el-form :model="filters" label-position="top" @submit.prevent="handleSearch">
+                            <el-row :gutter="20">
+                                <el-col :lg="6" :md="12"><el-form-item label="作者/标题/内容"><el-input v-model="filters.q" placeholder="输入关键词搜索" clearable @change="handleSearch"></el-input></el-form-item></el-col>
+                                <el-col :lg="4" :md="12"><el-form-item label="优先级"><el-select v-model="filters.priority" @change="handleSearch" style="width: 100%;" :teleported="true"><el-option label="全部" value="all"></el-option><el-option label="高" value="high"></el-option><el-option label="中" value="medium"></el-option><el-option label="低" value="low"></el-option></el-select></el-form-item></el-col>
+                                <el-col :lg="4" :md="12"><el-form-item label="发布状态"><el-select v-model="filters.status" @change="handleSearch" style="width: 100%;" :teleported="true"><el-option label="全部" value="all"></el-option><el-option label="已发布" value="published"></el-option><el-option label="待发布" value="scheduled"></el-option></el-select></el-form-item></el-col>
+                                <el-col :lg="4" :md="12"><el-form-item label="时间排序"><el-select v-model="filters.order" @change="handleSearch" style="width: 100%;" :teleported="true"><el-option label="最新优先" value="DESC"></el-option><el-option label="最早优先" value="ASC"></el-option></el-select></el-form-item></el-col>
+                                <el-col :lg="6" :md="24"><el-form-item label="发布日期"><el-date-picker v-model="dateRange" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" value-format="YYYY-MM-DD" @change="handleDateChange" style="width: 100%;"></el-date-picker></el-form-item></el-col>
+                            </el-row>
+                            <el-row justify="end">
+                                <el-button type="primary" @click="handleSearch">查询</el-button>
+                                <el-button @click="handleReset">重置</el-button>
+                                <el-button type="warning" @click="openBatchDialog">批量提醒未读</el-button>
+                            </el-row>
+                        </el-form>
+                    </el-card>
+
+                    <el-card class="box-card mt-4">
+                        <template #header><div class="d-flex justify-content-between align-items-center"><h5 class="mb-0">公告列表</h5><a href="/announcement/publish" class="el-button el-button--success"><i class="las la-plus mr-1"></i>发布新公告</a></div></template>
+                        <el-table :data="tableData" v-loading="loading" style="width: 100%" border>
+                            <el-table-column prop="title" label="标题" min-width="200" show-overflow-tooltip header-align="center"><template #default="scope">[[ scope.row.title ]]</template></el-table-column>
+                            <el-table-column prop="priority" label="优先级" width="100" align="center" header-align="center"><template #default="scope"><el-tag :type="priorityTagType(scope.row.priority)">[[ priorityMap[scope.row.priority] ]]</el-tag></template></el-table-column>
+                            <el-table-column prop="target_audience" label="发布对象" width="120" align="center" header-align="center"><template #default="scope">[[ audienceMap[scope.row.target_audience] ]]</template></el-table-column>
+                            <el-table-column prop="author_username" label="作者" width="120" align="center" header-align="center"><template #default="scope">[[ scope.row.author_username ]]</template></el-table-column>
+                            <el-table-column prop="status" label="状态" width="100" align="center" header-align="center"><template #default="scope"><el-tag :type="scope.row.status === 'published' ? 'success' : 'info'">[[ statusMap[scope.row.status] ]]</el-tag></template></el-table-column>
+                            <el-table-column prop="publish_at_formatted" label="发布时间" width="160" align="center" header-align="center"><template #default="scope">[[ scope.row.publish_at_formatted ]]</template></el-table-column>
+                            <el-table-column label="阅读情况" width="160" align="center" header-align="center">
+                                <template #default="scope">
+                                    <span class="reader-link" @click="openReadersDialog(scope.row)">已读: [[ scope.row.read_count ]]</span> /
+                                    <span class="reader-link" @click="openUnreadDialog(scope.row)">未读: [[ scope.row.total_readers - scope.row.read_count ]]</span>
+                                </template>
+                            </el-table-column>
+                            <el-table-column label="操作" width="100" fixed="right" align="center" header-align="center">
+                                <template #default="scope">
+                                    <el-dropdown trigger="click" @command="(cmd) => handleCommand(cmd, scope.row)">
+                                        <el-button type="primary" link>操作<el-icon class="el-icon--right"><arrow-down /></el-icon></el-button>
+                                        <template #dropdown>
+                                            <el-dropdown-menu>
+                                                <el-dropdown-item command="preview">预览</el-dropdown-item>
+                                                <el-dropdown-item v-if="scope.row.can_edit" command="edit">编辑</el-dropdown-item>
+                                                <el-dropdown-item v-if="scope.row.can_delete" command="delete" divided class="text-danger">删除</el-dropdown-item>
+                                                <el-dropdown-item v-if="!scope.row.can_edit && !scope.row.can_delete" disabled>无操作权限</el-dropdown-item>
+                                            </el-dropdown-menu>
+                                        </template>
+                                    </el-dropdown>
+                                </template>
+                            </el-table-column>
+                            <template #empty><el-empty description="暂无符合条件的数据"></el-empty></template>
+                        </el-table>
+                        <el-pagination v-if="pagination.total > 0" class="mt-4 justify-content-end" v-model:current-page="pagination.page" v-model:page-size="pagination.size" :page-sizes="[10, 20, 50, 100]" :total="pagination.total" layout="total, sizes, prev, pager, next, jumper" @size-change="handleSizeChange" @current-change="handleCurrentChange" />
+                    </el-card>
+
+                    <!-- 公告预览 Dialog -->
+                    <el-dialog v-model="previewDialog.visible" :title="previewDialog.data?.title" width="700px">
+                       <div v-if="previewDialog.data">
+                           <p><strong>作者:</strong> [[ previewDialog.data.author_username ]] | <strong>发布时间:</strong> [[ previewDialog.data.created_at_formatted ]]</p>
+                           <el-divider></el-divider>
+                           <div class="preview-content" v-html="previewDialog.data.content"></div>
+                           <div v-if="previewDialog.data.file_url" class="mt-3">
+                               <el-divider></el-divider>
+                               <strong>附件:</strong> <a :href="previewDialog.data.file_full_url" target="_blank" class="el-button el-button--primary el-button--small" download>下载附件</a>
+                           </div>
+                       </div>
+                       <template #footer><el-button type="primary" @click="previewDialog.visible = false">关闭</el-button></template>
+                    </el-dialog>
+
+                    <!-- 批量提醒 Dialog -->
+                    <el-dialog v-model="batchDialog.visible" title="批量提醒未读" width="80%">
+                        <el-alert title="此功能会向所选公告的【所有未读用户】发送邮件提醒，请谨慎操作。" type="warning" show-icon :closable="false" class="mb-3"></el-alert>
+                        <el-form :model="batchDialog" label-position="top" @submit.prevent="fetchBatchAnnouncements">
+                            <el-row :gutter="20">
+                                <el-col :span="6"><el-form-item label="关键词"><el-input v-model="batchDialog.q" placeholder="作者/标题/内容" clearable></el-input></el-form-item></el-col>
+                                <el-col :span="6"><el-form-item label="优先级"><el-select v-model="batchDialog.priority" style="width: 100%;" :teleported="true"><el-option label="全部" value="all"></el-option><el-option label="高" value="high"></el-option><el-option label="中" value="medium"></el-option><el-option label="低" value="low"></el-option></el-select></el-form-item></el-col>
+                                <el-col :span="6"><el-form-item label="发布状态"><el-select v-model="batchDialog.status" style="width: 100%;" :teleported="true"><el-option label="全部" value="all"></el-option><el-option label="已发布" value="published"></el-option><el-option label="待发布" value="scheduled"></el-option></el-select></el-form-item></el-col>
+                                <el-col :span="6"><el-form-item label="时间排序"><el-select v-model="batchDialog.order" style="width: 100%;" :teleported="true"><el-option label="最新优先" value="DESC"></el-option><el-option label="最早优先" value="ASC"></el-option></el-select></el-form-item></el-col>
+                            </el-row>
+                            <el-row :gutter="20">
+                                <el-col :span="12"><el-form-item label="发布日期"><el-date-picker v-model="batchDialog.dateRange" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" value-format="YYYY-MM-DD" style="width: 100%;"></el-date-picker></el-form-item></el-col>
+                                <el-col :span="12" class="d-flex align-items-end mb-3">
+                                    <el-button type="primary" @click="fetchBatchAnnouncements">查询</el-button>
+                                    <el-button @click="resetBatchFilters">重置</el-button>
+                                </el-col>
+                            </el-row>
+                        </el-form>
+
+                        <el-table :data="batchDialog.list" v-loading="batchDialog.loading" @selection-change="onBatchSelectionChange" height="360" border>
+                            <el-table-column type="selection" width="55" align="center"></el-table-column>
+                            <el-table-column prop="title" label="标题" min-width="260" show-overflow-tooltip></el-table-column>
+                            <el-table-column prop="priority" label="优先级" width="100" align="center">
+                                <template #default="scope"><el-tag :type="priorityTagType(scope.row.priority)">[[ priorityMap[scope.row.priority] ]]</el-tag></template>
+                            </el-table-column>
+                            <el-table-column prop="status" label="发布状态" width="100" align="center">
+                                <template #default="scope"><el-tag :type="scope.row.status === 'published' ? 'success' : 'warning'">[[ statusMap[scope.row.status] ]]</el-tag></template>
+                            </el-table-column>
+                            <el-table-column prop="author_username" label="作者" width="120" align="center"></el-table-column>
+                            <el-table-column prop="publish_at_formatted" label="发布时间" width="160" align="center"></el-table-column>
+                        </el-table>
+
+                        <template #footer>
+                           <el-button @click="batchDialog.visible = false">取消</el-button>
+                           <el-button type="primary" @click="handleBatchConfirm" :disabled="batchDialog.selectedIds.length === 0">提醒所选 ([[ batchDialog.selectedIds.length ]])</el-button>
+                        </template>
+                    </el-dialog>
+
+                    <!-- 已读用户列表 Dialog -->
+                    <el-dialog v-model="readersDialog.visible" :title="'已读用户列表 - ' + readersDialog.title" width="600px">
+                        <el-table :data="readersDialog.list" v-loading="readersDialog.loading" border max-height="400px">
+                            <el-table-column label="昵称/用户名">
+                                <template #default="scope">[[ scope.row.nickname || scope.row.username ]]</template>
+                            </el-table-column>
+                            <el-table-column prop="read_at" label="阅读时间" />
+                        </el-table>
+                         <el-pagination v-if="readersDialog.pagination.total_count > readersDialog.pagination.size" class="mt-4 justify-content-end" v-model:current-page="readersDialog.pagination.current_page" :page-size="readersDialog.pagination.size" :total="readersDialog.pagination.total_count" layout="total, prev, pager, next" @current-change="handleReadersPageChange" />
+                        <template #footer><el-button @click="readersDialog.visible = false">关闭</el-button></template>
+                    </el-dialog>
+
+                    <!-- 未读用户列表 Dialog -->
+                     <el-dialog v-model="unreadDialog.visible" :title="'未读用户列表 - ' + unreadDialog.title" width="600px">
+                        <el-table :data="unreadDialog.list" v-loading="unreadDialog.loading" border max-height="400px">
+                             <el-table-column label="昵称/用户名">
+                                 <template #default="scope">[[ scope.row.nickname || scope.row.username ]]</template>
+                             </el-table-column>
+                        </el-table>
+                        <el-pagination v-if="unreadDialog.pagination.total_count > unreadDialog.pagination.size" class="mt-4 justify-content-end" v-model:current-page="unreadDialog.pagination.current_page" :page-size="unreadDialog.pagination.size" :total="unreadDialog.pagination.total_count" layout="total, prev, pager, next" @current-change="handleUnreadPageChange" />
+                        <template #footer>
+                            <el-button @click="unreadDialog.visible = false">关闭</el-button>
+                            <el-button type="primary" @click="handleRemindAllUnread">一键提醒所有未读用户</el-button>
+                        </template>
+                    </el-dialog>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/backend-bundle.min.js"></script><script src="/static/js/customizer.js"></script><script src="/static/js/sidebar.js"></script><script src="/static/js/app.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><script src="https://unpkg.com/element-plus/dist/index.full.js"></script><script src="https://unpkg.com/@element-plus/icons-vue"></script>
+    <script type="module" src="/static/js/pages/manage_announcements_vue.js"></script>
+    <script type="module" src="/static/js/pages/dashboard.js"></script>
+    <script>
+        const observer = new MutationObserver(mutations => {
+            for (const mutation of mutations) {
+                if (mutation.attributeName === 'class') {
+                    const isBodyDark = document.body.classList.contains('dark');
+                    if (isBodyDark) document.documentElement.classList.add('dark');
+                    else document.documentElement.classList.remove('dark');
+                }
+            }
+        });
+        observer.observe(document.body, { attributes: true });
+        if (document.body.classList.contains('dark')) document.documentElement.classList.add('dark');
+    </script>
+</body>
+</html>
+

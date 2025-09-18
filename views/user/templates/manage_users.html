@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>用户管理 - 情感分析平台</title>
+    <link rel="stylesheet" href="/static/css/backend-plugin.min.css">
+    <link rel="stylesheet" href="/static/css/backend.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/theme-chalk/dark/css-vars.css" />
+    <style>
+        :root {
+            --bg-color: #f5f7fa; --card-bg-color: #ffffff;
+            --text-primary: #303133; --text-regular: #606266;
+            --border-color: #dcdfe6;
+        }
+        body.dark {
+            --bg-color: #16171B; --card-bg-color: #212226;
+            --text-primary: #e5e7eb; --text-regular: #9ca3af;
+            --border-color: #374151;
+        }
+        body { background-color: var(--bg-color); }
+        .content-page { background-color: var(--bg-color); }
+        .card { border-color: var(--border-color); background-color: var(--card-bg-color); }
+        h4, h5 { color: var(--text-primary); }
+        .detail-item { display: flex; align-items: center; margin-bottom: 12px; font-size: 14px; }
+        .detail-item-label { width: 90px; color: #909399; text-align: right; padding-right: 12px; }
+        .detail-item-content { flex: 1; }
+        .dialog-avatar-container { text-align: center; margin-bottom: 20px; }
+        .text-danger { color: #f56c6c; }
+    </style>
+</head>
+<body data-user-role="{{ user_role }}" data-user-id="{{ current_user.id }}">
+    <div id="loading"><div id="loading-center"></div></div>
+    <div class="wrapper">
+        {% include 'components/sidebar.html' %}
+        <div class="iq-top-navbar"><div class="iq-navbar-custom">{% include 'components/top_navbar.html' %}</div></div>
+        <div class="content-page">
+            <div class="container-fluid">
+                <div class="row"><div class="col-lg-12"><div class="d-flex flex-wrap align-items-center justify-content-between mb-4"><div><h4 class="mb-3">用户管理</h4></div></div></div></div>
+                <div id="user-management-app">
+                    <el-card class="box-card">
+                         <el-form :model="filters" label-position="top" @submit.prevent="handleSearch">
+                            <el-row :gutter="20">
+                                <el-col :lg="6" :md="12"><el-form-item label="用户/昵称/邮箱"><el-input v-model="filters.q" placeholder="输入关键词搜索" clearable @change="handleSearch"></el-input></el-form-item></el-col>
+                                <el-col :lg="5" :md="12"><el-form-item label="用户角色"><el-select v-model="filters.role" @change="handleSearch" style="width: 100%;"><el-option label="全部角色" value="all"></el-option><el-option label="普通用户" value="user"></el-option><el-option label="管理员" value="admin"></el-option><el-option v-if="isAdminSuper" label="超级管理员" value="super_admin"></el-option></el-select></el-form-item></el-col>
+                                <el-col :lg="5" :md="12"><el-form-item label="账户状态"><el-select v-model="filters.status" @change="handleSearch" style="width: 100%;"><el-option label="全部状态" value="all"></el-option><el-option label="正常" value="active"></el-option><el-option label="已禁用" value="disabled"></el-option></el-select></el-form-item></el-col>
+                                <el-col :lg="8" :md="12"><el-form-item label="注册日期"><el-date-picker v-model="dateRange" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" value-format="YYYY-MM-DD" @change="handleDateChange" style="width: 100%;"></el-date-picker></el-form-item></el-col>
+                            </el-row>
+                            <el-row justify="end"><el-button type="primary" @click="handleSearch">查询</el-button><el-button @click="handleReset">重置</el-button></el-row>
+                        </el-form>
+                    </el-card>
+
+                    <el-card class="box-card">
+                        <template #header><div class="d-flex justify-content-between align-items-center"><h5 class="mb-0">用户列表</h5><el-button type="success" @click="exportCsv"><i class="las la-file-export mr-1"></i>导出CSV</el-button></div></template>
+                        <el-table :data="tableData" v-loading="loading" @sort-change="handleSortChange" style="width: 100%" border>
+                            <el-table-column prop="id" label="ID" sortable="custom" width="80" align="center" header-align="center"><template #default="scope">[[ scope.row.id ]]</template></el-table-column>
+                            <el-table-column prop="username" label="用户名" sortable="custom" min-width="150" header-align="center"><template #default="scope">[[ scope.row.username ]]</template></el-table-column>
+                            <el-table-column prop="email" label="电子邮箱" min-width="180" header-align="center"><template #default="scope"><span>[[ scope.row.email ? maskEmail(scope.row.email) : '—' ]]</span></template></el-table-column>
+                            <el-table-column prop="role" label="角色" width="120" sortable="custom" align="center" header-align="center"><template #default="scope"><el-tag :type="roleTagType(scope.row.role)">[[ roleMap[scope.row.role] || scope.row.role ]]</el-tag></template></el-table-column>
+                            <el-table-column prop="status" label="状态" width="100" sortable="custom" align="center" header-align="center"><template #default="scope"><el-tag :type="scope.row.status === 'active' ? 'success' : 'info'">[[ scope.row.status === 'active' ? '正常' : '已禁用' ]]</el-tag></template></el-table-column>
+                            <el-table-column prop="createTime" label="注册时间" sortable="custom" min-width="180" align="center" header-align="center"><template #default="scope">[[ scope.row.createTime ]]</template></el-table-column>
+                            <el-table-column label="用户详情" width="110" align="center" header-align="center"><template #default="scope"><el-button @click="showDetails(scope.row)" type="primary" link>点击查看</el-button></template></el-table-column>
+                            <el-table-column label="操作" width="100" fixed="right" align="center" header-align="center">
+                                <template #default="scope">
+                                    <el-dropdown trigger="click" @command="(cmd) => handleCommand(cmd, scope.row)">
+                                        <el-button type="primary" link>操作<el-icon class="el-icon--right"><arrow-down /></el-icon></el-button>
+                                        <template #dropdown>
+                                            <el-dropdown-menu>
+                                                <el-dropdown-item v-if="canEditNickname(scope.row)" command="editNickname">修改昵称</el-dropdown-item>
+                                                <el-dropdown-item v-if="canChangeRole(scope.row)" command="changeRole">更改用户角色</el-dropdown-item>
+                                                <el-dropdown-item v-if="scope.row.status === 'active' && canPerformAction(scope.row)" command="ban">封禁用户</el-dropdown-item>
+                                                <el-dropdown-item v-if="scope.row.status === 'disabled' && canPerformAction(scope.row)" command="unban">解封用户</el-dropdown-item>
+                                                <el-dropdown-item v-if="canPerformAction(scope.row)" command="resetPassword">重置密码</el-dropdown-item>
+                                                <el-dropdown-item v-if="canDelete(scope.row)" command="delete" divided class="text-danger">删除用户</el-dropdown-item>
+                                                <el-dropdown-item v-if="!canPerformAnyAction(scope.row)" disabled divided style="justify-content: center;">无操作权限</el-dropdown-item>
+                                            </el-dropdown-menu>
+                                        </template>
+                                    </el-dropdown>
+                                </template>
+                            </el-table-column>
+                            <template #empty><el-empty description="暂无符合条件的数据"></el-empty></template>
+                        </el-table>
+                        <el-pagination v-if="pagination.total > 0" class="mt-4 justify-content-end" v-model:current-page="pagination.page" v-model:page-size="pagination.limit" :page-sizes="[10, 20, 50, 100]" :total="pagination.total" layout="total, sizes, prev, pager, next, jumper" @size-change="handleSizeChange" @current-change="handleCurrentChange" />
+                    </el-card>
+
+                    <el-dialog v-model="detailsDialog.visible" title="用户详情" width="600px">
+                       <div v-if="detailsDialog.user">
+                           <div class="dialog-avatar-container"><el-avatar :size="80" :src="generateSvgAvatar(detailsDialog.user.username, detailsDialog.user.avatar)"/></div>
+                           <div class="detail-item"><div class="detail-item-label">ID:</div><div class="detail-item-content">[[ detailsDialog.user.id ]]</div></div>
+                           <div class="detail-item"><div class="detail-item-label">用户名:</div><div class="detail-item-content">[[ detailsDialog.user.username ]]</div></div>
+                           <div class="detail-item"><div class="detail-item-label">昵称:</div><div class="detail-item-content">[[ detailsDialog.user.nickname || '—' ]]</div></div>
+                           <div class="detail-item"><div class="detail-item-label">电子邮箱:</div><div class="detail-item-content">[[ detailsDialog.user.email || '—' ]]</div></div>
+                           <div class="detail-item"><div class="detail-item-label">角色:</div><div class="detail-item-content"><el-tag :type="roleTagType(detailsDialog.user.role)">[[ roleMap[detailsDialog.user.role] ]]</el-tag></div></div>
+                           <div class="detail-item"><div class="detail-item-label">状态:</div><div class="detail-item-content"><el-tag :type="detailsDialog.user.status === 'active' ? 'success' : 'info'">[[ detailsDialog.user.status === 'active' ? '正常' : '已禁用' ]]</el-tag></div></div>
+                           <div class="detail-item"><div class="detail-item-label">注册时间:</div><div class="detail-item-content">[[ detailsDialog.user.createTime ]]</div></div>
+                       </div>
+                       <template #footer><el-button type="primary" @click="detailsDialog.visible = false">关闭</el-button></template>
+                    </el-dialog>
+
+                    <el-dialog v-model="nicknameDialog.visible" title="修改用户昵称" width="500px">
+                         <el-form v-if="nicknameDialog.user" :model="nicknameDialog.form" label-position="top">
+                             <p>正在为用户 <strong>[[ nicknameDialog.user.username ]]</strong> 修改昵称。</p>
+                             <el-form-item label="新昵称" class="mt-3"><el-input v-model="nicknameDialog.form.nickname" placeholder="请输入新的昵称"></el-input></el-form-item>
+                         </el-form>
+                         <template #footer>
+                            <el-button @click="nicknameDialog.visible = false">取消</el-button>
+                            <el-button type="primary" @click="submitNicknameUpdate">确认修改</el-button>
+                         </template>
+                    </el-dialog>
+
+                    <el-dialog v-model="banDialog.visible" title="封禁用户" width="500px">
+                        <p v-if="banDialog.user">确认要封禁用户 <strong>[[ banDialog.user.username ]]</strong> 吗？</p>
+                        <el-form :model="banDialog.form" label-position="top" class="mt-3">
+                             <el-form-item label="封禁原因" required><el-select v-model="banDialog.form.reason" placeholder="请选择封禁原因" style="width: 100%;"><el-option label="发布违规内容" value="发布违规内容"></el-option><el-option label="滥用平台功能" value="滥用平台功能"></el-option><el-option label="安全风险" value="安全风险"></el-option><el-option label="其他" value="其他"></el-option></el-select></el-form-item>
+                            <el-form-item label="详细说明"><el-input type="textarea" :rows="3" v-model="banDialog.form.details" placeholder="请提供详细的封禁说明（选择“其他”时必填）"></el-input></el-form-item>
+                        </el-form>
+                        <template #footer>
+                            <el-button @click="banDialog.visible = false">取消</el-button>
+                            <el-button type="danger" @click="submitBan">确认封禁</el-button>
+                        </template>
+                    </el-dialog>
+
+                    <el-dialog v-model="roleDialog.visible" title="更改用户角色" width="500px">
+                        <div v-if="roleDialog.user">
+                           <p>正在为用户 <strong>[[ roleDialog.user.username ]]</strong> 更改角色。</p>
+                           <p class="mt-2">当前角色：<el-tag :type="roleTagType(roleDialog.user.role)">[[ roleMap[roleDialog.user.role] ]]</el-tag></p>
+                           <el-form :model="roleDialog.form" label-position="top" class="mt-3">
+                               <el-form-item label="新角色" required>
+                                   <el-radio-group v-model="roleDialog.form.newRole">
+                                       <el-radio label="user">普通用户</el-radio>
+                                       <el-radio label="admin">管理员</el-radio>
+                                   </el-radio-group>
+                               </el-form-item>
+                           </el-form>
+                        </div>
+                        <template #footer>
+                            <el-button @click="roleDialog.visible = false">取消</el-button>
+                            <el-button type="primary" @click="submitRoleUpdate">确认更改</el-button>
+                        </template>
+                    </el-dialog>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/backend-bundle.min.js"></script><script src="/static/js/customizer.js"></script><script src="/static/js/sidebar.js"></script><script src="/static/js/app.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><script src="https://unpkg.com/element-plus/dist/index.full.js"></script><script src="https://unpkg.com/@element-plus/icons-vue"></script>
+    <script type="module" src="/static/js/pages/manage_users_vue.js"></script>
+    <script type="module" src="/static/js/pages/dashboard.js"></script>
+    <script>
+        const observer = new MutationObserver(mutations => {
+            for (const mutation of mutations) {
+                if (mutation.attributeName === 'class') {
+                    const isBodyDark = document.body.classList.contains('dark');
+                    if (isBodyDark) {
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                    }
+                }
+            }
+        });
+        observer.observe(document.body, { attributes: true });
+        if (document.body.classList.contains('dark')) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,3995 @@
+{
+    "home_tags_data": {
+        "article_count": 9467,
+        "comment_count": 250889,
+        "top_author_name": "互联网真精彩呢",
+        "top_author_likes": 21089,
+        "most_common_city": "广东",
+        "most_common_city_count": 33244,
+        "most_active_city_heatIndex": 232662,
+        "gender_distribution": {
+            "男": 88579,
+            "女": 162310
+        }
+    },
+    "home_comments_top_four": [
+        [
+            "5195482537921587",
+            "5195467018996469",
+            "2025-08-03T09:03:47",
+            9032,
+            "广东",
+            "我记得好多年前通报还没有这么详细，现在一般引起重大舆情的事件都会有详细通报，也是一种进步吧。通报内容还挺符合逻辑的，也符合我之前工作的经验，有些事情乍一眼看上去很像是巨大的阴谋，但其实就是基层工作中形成的种种巧合。",
+            "轻云云云云",
+            "女",
+            "广东",
+            "https://tvax3.sinaimg.cn/crop.0.0.996.996.50/007sNZnvly8ggcutv69xpj30ro0ro77p.jpg?KID=imgbed,tva&Expires=1754422464&ssig=5k7pqp9JwI",
+            "2025-08-07T03:13:06",
+            null,
+            "negative",
+            "😠"
+        ],
+        [
+            "5194066625298848",
+            "5194060651825376",
+            "2025-07-30T11:17:26",
+            9020,
+            "山西",
+            "宠物的证件照都很萌呢，我很喜欢",
+            "贝彤的开心",
+            "男",
+            "其他",
+            "https://tvax4.sinaimg.cn/crop.0.0.132.132.50/008hTijSly4gpmqj4vaitj303o03odfq.jpg?KID=imgbed,tva&Expires=1754431435&ssig=n0aFmE0Qhc",
+            "2025-08-07T03:13:08",
+            null,
+            "positive",
+            "😊"
+        ],
+        [
+            "5211097596428567",
+            "5211034068714107",
+            "2025-09-15T11:12:26",
+            9017,
+            "福建",
+            "我也要穿阿迪啊",
+            "玩相機的小楊",
+            "男",
+            "广东",
+            "https://tvax3.sinaimg.cn/crop.0.0.996.996.50/006rrUYmly8gegrujwsprj30ro0roq7m.jpg?KID=imgbed,tva&Expires=1758129089&ssig=agIn2iQ8ju",
+            "2025-09-17T23:38:53",
+            null,
+            "neutral",
+            "😐"
+        ],
+        [
+            "5194140737868044",
+            "5194130472831365",
+            "2025-07-30T16:11:57",
+            9016,
+            "山东",
+            "确实最爱看的一本书",
+            "被寄生的仁几一枚呀",
+            "女",
+            "海外",
+            "https://tvax4.sinaimg.cn/crop.0.0.500.500.50/ea10aea6ly8i425w5yyzej20dw0dwt9y.jpg?KID=imgbed,tva&Expires=1754427086&ssig=aGGzSFw%2B52",
+            "2025-08-07T03:13:07",
+            null,
+            "positive",
+            "😊"
+        ],
+        [
+            "5191708396487407",
+            "5191706812879075",
+            "2025-07-23T23:06:41",
+            6230,
+            "广东",
+            "猫一直响（逆向版",
+            "orororlit",
+            "男",
+            "广东",
+            "https://tvax3.sinaimg.cn/crop.0.0.996.996.50/0074Dp2cly8g208nzwcoqj30ro0ro752.jpg?KID=imgbed,tva&Expires=1754432743&ssig=cX2UawdfS%2B",
+            "2025-08-07T03:13:08",
+            null,
+            "neutral",
+            "😐"
+        ]
+    ],
+    "china_province_activity": {
+        "青海": {
+            "articles": 19,
+            "comments": 667,
+            "activeUsers": 488,
+            "heatIndex": 4501
+        },
+        "吉林": {
+            "articles": 75,
+            "comments": 2864,
+            "activeUsers": 2363,
+            "heatIndex": 19796
+        },
+        "北京": {
+            "articles": 1049,
+            "comments": 10429,
+            "activeUsers": 9285,
+            "heatIndex": 81205
+        },
+        "海南": {
+            "articles": 61,
+            "comments": 1758,
+            "activeUsers": 1484,
+            "heatIndex": 12368
+        },
+        "四川": {
+            "articles": 472,
+            "comments": 12623,
+            "activeUsers": 10785,
+            "heatIndex": 89405
+        },
+        "江西": {
+            "articles": 148,
+            "comments": 6323,
+            "activeUsers": 5393,
+            "heatIndex": 43881
+        },
+        "福建": {
+            "articles": 383,
+            "comments": 9712,
+            "activeUsers": 7873,
+            "heatIndex": 68136
+        },
+        "贵州": {
+            "articles": 86,
+            "comments": 3581,
+            "activeUsers": 3057,
+            "heatIndex": 24879
+        },
+        "宁夏": {
+            "articles": 8,
+            "comments": 851,
+            "activeUsers": 707,
+            "heatIndex": 5749
+        },
+        "江苏": {
+            "articles": 465,
+            "comments": 16387,
+            "activeUsers": 14178,
+            "heatIndex": 114941
+        },
+        "新疆": {
+            "articles": 57,
+            "comments": 2386,
+            "activeUsers": 2045,
+            "heatIndex": 16590
+        },
+        "黑龙江": {
+            "articles": 64,
+            "comments": 3501,
+            "activeUsers": 2920,
+            "heatIndex": 23985
+        },
+        "辽宁": {
+            "articles": 124,
+            "comments": 6853,
+            "activeUsers": 5750,
+            "heatIndex": 47005
+        },
+        "中国澳门": {
+            "articles": 6,
+            "comments": 65,
+            "activeUsers": 66,
+            "heatIndex": 517
+        },
+        "上海": {
+            "articles": 424,
+            "comments": 9392,
+            "activeUsers": 8241,
+            "heatIndex": 67682
+        },
+        "广西": {
+            "articles": 93,
+            "comments": 7239,
+            "activeUsers": 6066,
+            "heatIndex": 49257
+        },
+        "陕西": {
+            "articles": 159,
+            "comments": 6128,
+            "activeUsers": 5255,
+            "heatIndex": 42740
+        },
+        "浙江": {
+            "articles": 618,
+            "comments": 14473,
+            "activeUsers": 12497,
+            "heatIndex": 103539
+        },
+        "湖北": {
+            "articles": 216,
+            "comments": 8385,
+            "activeUsers": 7114,
+            "heatIndex": 58313
+        },
+        "安徽": {
+            "articles": 195,
+            "comments": 8210,
+            "activeUsers": 6770,
+            "heatIndex": 56540
+        },
+        "重庆": {
+            "articles": 236,
+            "comments": 5658,
+            "activeUsers": 4805,
+            "heatIndex": 40260
+        },
+        "天津": {
+            "articles": 82,
+            "comments": 3344,
+            "activeUsers": 2945,
+            "heatIndex": 23430
+        },
+        "河北": {
+            "articles": 282,
+            "comments": 11065,
+            "activeUsers": 9255,
+            "heatIndex": 76655
+        },
+        "甘肃": {
+            "articles": 47,
+            "comments": 2327,
+            "activeUsers": 1979,
+            "heatIndex": 16063
+        },
+        "湖南": {
+            "articles": 276,
+            "comments": 8884,
+            "activeUsers": 7537,
+            "heatIndex": 62254
+        },
+        "中国香港": {
+            "articles": 42,
+            "comments": 648,
+            "activeUsers": 596,
+            "heatIndex": 4852
+        },
+        "山东": {
+            "articles": 283,
+            "comments": 15040,
+            "activeUsers": 12882,
+            "heatIndex": 103794
+        },
+        "河南": {
+            "articles": 292,
+            "comments": 14634,
+            "activeUsers": 11820,
+            "heatIndex": 99730
+        },
+        "山西": {
+            "articles": 102,
+            "comments": 5142,
+            "activeUsers": 4219,
+            "heatIndex": 35168
+        },
+        "云南": {
+            "articles": 71,
+            "comments": 3950,
+            "activeUsers": 3373,
+            "heatIndex": 27206
+        },
+        "南海诸岛": {
+            "articles": 0,
+            "comments": 0,
+            "activeUsers": 0,
+            "heatIndex": 0
+        },
+        "广东": {
+            "articles": 1077,
+            "comments": 33244,
+            "activeUsers": 27836,
+            "heatIndex": 232662
+        },
+        "内蒙古": {
+            "articles": 52,
+            "comments": 2413,
+            "activeUsers": 2048,
+            "heatIndex": 16681
+        },
+        "中国台湾": {
+            "articles": 26,
+            "comments": 926,
+            "activeUsers": 794,
+            "heatIndex": 6478
+        },
+        "西藏": {
+            "articles": 12,
+            "comments": 183,
+            "activeUsers": 162,
+            "heatIndex": 1359
+        }
+    },
+    "sentiment_distribution": {
+        "counts": {
+            "positive": 129984,
+            "negative": 47587,
+            "neutral": 73318
+        },
+        "total": 250889
+    },
+    "gender_interest_data": {
+        "male": [
+            {
+                "name": "军事",
+                "value": 3391
+            },
+            {
+                "name": "数码",
+                "value": 3329
+            },
+            {
+                "name": "历史",
+                "value": 3849
+            },
+            {
+                "name": "汽车",
+                "value": 3781
+            },
+            {
+                "name": "科技",
+                "value": 3472
+            },
+            {
+                "name": "动漫",
+                "value": 1809
+            },
+            {
+                "name": "综艺",
+                "value": 1762
+            },
+            {
+                "name": "电影",
+                "value": 2462
+            },
+            {
+                "name": "音乐",
+                "value": 1599
+            },
+            {
+                "name": "明星",
+                "value": 1554
+            }
+        ],
+        "female": [
+            {
+                "name": "军事",
+                "value": 1721
+            },
+            {
+                "name": "数码",
+                "value": 2239
+            },
+            {
+                "name": "历史",
+                "value": 2198
+            },
+            {
+                "name": "汽车",
+                "value": 2529
+            },
+            {
+                "name": "科技",
+                "value": 3065
+            },
+            {
+                "name": "动漫",
+                "value": 6676
+            },
+            {
+                "name": "综艺",
+                "value": 6908
+            },
+            {
+                "name": "电影",
+                "value": 6350
+            },
+            {
+                "name": "音乐",
+                "value": 7752
+            },
+            {
+                "name": "明星",
+                "value": 8287
+            }
+        ]
+    },
+    "word_cloud_data": [
+        {
+            "name": "中国",
+            "value": 1196,
+            "textStyle": {
+                "color": "#8B0000"
+            }
+        },
+        {
+            "name": "人民",
+            "value": 1151,
+            "textStyle": {
+                "color": "#CD5C5C"
+            }
+        },
+        {
+            "name": "国家",
+            "value": 1146,
+            "textStyle": {
+                "color": "#DC143C"
+            }
+        },
+        {
+            "name": "祖国",
+            "value": 1124,
+            "textStyle": {
+                "color": "#A52A2A"
+            }
+        },
+        {
+            "name": "中华民族",
+            "value": 958,
+            "textStyle": {
+                "color": "#B22222"
+            }
+        },
+        {
+            "name": "梦想",
+            "value": 799,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "幸福",
+            "value": 763,
+            "textStyle": {
+                "color": "#191970"
+            }
+        },
+        {
+            "name": "美好",
+            "value": 743,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "科技",
+            "value": 739,
+            "textStyle": {
+                "color": "#1E90FF"
+            }
+        },
+        {
+            "name": "文化",
+            "value": 735,
+            "textStyle": {
+                "color": "#191970"
+            }
+        },
+        {
+            "name": "未来",
+            "value": 729,
+            "textStyle": {
+                "color": "#0000CD"
+            }
+        },
+        {
+            "name": "环境",
+            "value": 715,
+            "textStyle": {
+                "color": "#0000CD"
+            }
+        },
+        {
+            "name": "奋斗",
+            "value": 714,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "健康",
+            "value": 706,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "经济",
+            "value": 699,
+            "textStyle": {
+                "color": "#191970"
+            }
+        },
+        {
+            "name": "发展",
+            "value": 696,
+            "textStyle": {
+                "color": "#4169E1"
+            }
+        },
+        {
+            "name": "文明",
+            "value": 695,
+            "textStyle": {
+                "color": "#191970"
+            }
+        },
+        {
+            "name": "教育",
+            "value": 695,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "创新",
+            "value": 678,
+            "textStyle": {
+                "color": "#1E90FF"
+            }
+        },
+        {
+            "name": "稳定",
+            "value": 676,
+            "textStyle": {
+                "color": "#0000CD"
+            }
+        },
+        {
+            "name": "建设",
+            "value": 660,
+            "textStyle": {
+                "color": "#1E90FF"
+            }
+        },
+        {
+            "name": "和谐",
+            "value": 656,
+            "textStyle": {
+                "color": "#191970"
+            }
+        },
+        {
+            "name": "自由",
+            "value": 639,
+            "textStyle": {
+                "color": "#4169E1"
+            }
+        },
+        {
+            "name": "进步",
+            "value": 638,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "团结",
+            "value": 597,
+            "textStyle": {
+                "color": "#1E90FF"
+            }
+        },
+        {
+            "name": "爱国",
+            "value": 578,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "敬业",
+            "value": 563,
+            "textStyle": {
+                "color": "#1E90FF"
+            }
+        },
+        {
+            "name": "诚信",
+            "value": 558,
+            "textStyle": {
+                "color": "#4169E1"
+            }
+        },
+        {
+            "name": "生态",
+            "value": 554,
+            "textStyle": {
+                "color": "#4682B4"
+            }
+        },
+        {
+            "name": "平等",
+            "value": 552,
+            "textStyle": {
+                "color": "#4169E1"
+            }
+        },
+        {
+            "name": "公正",
+            "value": 550,
+            "textStyle": {
+                "color": "#0000CD"
+            }
+        },
+        {
+            "name": "希望",
+            "value": 400,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "世界",
+            "value": 382,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "宝宝",
+            "value": 364,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "喜欢",
+            "value": 351,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "可爱",
+            "value": 350,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "精神",
+            "value": 348,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "感觉",
+            "value": 344,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "权步",
+            "value": 341,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "期待",
+            "value": 340,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "转发",
+            "value": 340,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "好看",
+            "value": 339,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "知识",
+            "value": 334,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "啊啊啊",
+            "value": 332,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "好帅",
+            "value": 331,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "全球",
+            "value": 330,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "支持",
+            "value": 329,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "演唱会",
+            "value": 329,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "回复",
+            "value": 329,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "分享",
+            "value": 326,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "晚安",
+            "value": 324,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "知道",
+            "value": 324,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "老师",
+            "value": 323,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "致敬",
+            "value": 320,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "姐姐",
+            "value": 320,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "超话",
+            "value": 319,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "看到",
+            "value": 317,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "千玺",
+            "value": 316,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "感谢",
+            "value": 315,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "谢谢",
+            "value": 315,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "民族",
+            "value": 315,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "智慧",
+            "value": 315,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "侯明昊",
+            "value": 314,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "孩子",
+            "value": 314,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "张真源",
+            "value": 313,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "和平",
+            "value": 313,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "大家",
+            "value": 313,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "加油",
+            "value": 313,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "生活",
+            "value": 313,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "微博",
+            "value": 313,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "有点",
+            "value": 311,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "刘宇宁",
+            "value": 311,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "不能",
+            "value": 310,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "王一博",
+            "value": 310,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "博主",
+            "value": 310,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "评论",
+            "value": 309,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "起来",
+            "value": 309,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "舞台",
+            "value": 308,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "不会",
+            "value": 308,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "电影",
+            "value": 307,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "张予",
+            "value": 307,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "力量",
+            "value": 306,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "太美",
+            "value": 306,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "人生",
+            "value": 304,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "问题",
+            "value": 304,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "粉丝",
+            "value": 303,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "还有",
+            "value": 303,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "勇气",
+            "value": 303,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "出来",
+            "value": 303,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "太帅",
+            "value": 302,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "视频",
+            "value": 301,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "体验",
+            "value": 300,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "妈妈",
+            "value": 300,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "就是",
+            "value": 300,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "合作",
+            "value": 300,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "人家",
+            "value": 299,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "关注",
+            "value": 299,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "老公",
+            "value": 299,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "朋友",
+            "value": 298,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "手机",
+            "value": 298,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "拒绝",
+            "value": 298,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "日本",
+            "value": 297,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "看看",
+            "value": 297,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "好运",
+            "value": 297,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "演员",
+            "value": 296,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "地方",
+            "value": 296,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "东西",
+            "value": 296,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "内容",
+            "value": 296,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "鞠婧",
+            "value": 295,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "时刻",
+            "value": 295,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "家庭",
+            "value": 295,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "毅力",
+            "value": 294,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "值得",
+            "value": 294,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "不错",
+            "value": 294,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "需要",
+            "value": 294,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "赵一博",
+            "value": 294,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "历史",
+            "value": 293,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "老婆",
+            "value": 293,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "不行",
+            "value": 293,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "英雄",
+            "value": 293,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "爱心",
+            "value": 293,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "开心",
+            "value": 293,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "心灵",
+            "value": 293,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "看着",
+            "value": 293,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "白鹿",
+            "value": 293,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "实力",
+            "value": 292,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "角色",
+            "value": 292,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "挑战",
+            "value": 292,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "哥哥",
+            "value": 292,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "快乐",
+            "value": 292,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "样子",
+            "value": 292,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "传统",
+            "value": 292,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "时间",
+            "value": 291,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "坚持",
+            "value": 291,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "陈星旭",
+            "value": 290,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "机会",
+            "value": 290,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "开始",
+            "value": 290,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "精彩",
+            "value": 290,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "地球",
+            "value": 290,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "继续",
+            "value": 290,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "虞书欣",
+            "value": 289,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "保障",
+            "value": 289,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "丁程鑫",
+            "value": 289,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "公司",
+            "value": 288,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "运动",
+            "value": 288,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "宝贝",
+            "value": 288,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "打卡",
+            "value": 287,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "美食",
+            "value": 287,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "事情",
+            "value": 287,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "信心",
+            "value": 287,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "厉害",
+            "value": 287,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "好吃",
+            "value": 286,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "用心",
+            "value": 286,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "演技",
+            "value": 286,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "造型",
+            "value": 285,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "好像",
+            "value": 285,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "代言人",
+            "value": 285,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "一下",
+            "value": 285,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "邓为",
+            "value": 285,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "热情",
+            "value": 284,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "追求",
+            "value": 284,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "美丽",
+            "value": 284,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "工作",
+            "value": 284,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "美国",
+            "value": 284,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "游戏",
+            "value": 284,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "陈丽君",
+            "value": 284,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "伟人",
+            "value": 283,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "时代",
+            "value": 283,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "能量",
+            "value": 283,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "事业",
+            "value": 283,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "好听",
+            "value": 282,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "魅力",
+            "value": 282,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "品牌",
+            "value": 282,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "心情",
+            "value": 282,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "奉献",
+            "value": 281,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "音乐",
+            "value": 281,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "想要",
+            "value": 281,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "衣服",
+            "value": 281,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "华为",
+            "value": 281,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "心动",
+            "value": 281,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "新鲜",
+            "value": 281,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "肖战",
+            "value": 281,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "细节",
+            "value": 280,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "女性",
+            "value": 280,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "成长",
+            "value": 280,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "爱情",
+            "value": 280,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "动作",
+            "value": 280,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "人间",
+            "value": 280,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "学习",
+            "value": 280,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "眼睛",
+            "value": 279,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "巡演",
+            "value": 279,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "道德",
+            "value": 279,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "一起",
+            "value": 279,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "漂亮",
+            "value": 279,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "美的",
+            "value": 278,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "结果",
+            "value": 278,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "太棒了",
+            "value": 278,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "肯定",
+            "value": 278,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "故事",
+            "value": 278,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "热巴",
+            "value": 278,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "兄弟",
+            "value": 278,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "美美",
+            "value": 278,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "交流",
+            "value": 277,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "成功",
+            "value": 277,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "机遇",
+            "value": 277,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "目标",
+            "value": 277,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "适合",
+            "value": 277,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "个人",
+            "value": 277,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "恶心",
+            "value": 276,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "发现",
+            "value": 276,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "风格",
+            "value": 276,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "高温",
+            "value": 276,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "感受",
+            "value": 276,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "实现",
+            "value": 276,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "阳光",
+            "value": 275,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "收藏",
+            "value": 275,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "身体",
+            "value": 275,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "女神",
+            "value": 275,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "空间",
+            "value": 275,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "找到",
+            "value": 275,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "图片",
+            "value": 274,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "皮肤",
+            "value": 274,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "状态",
+            "value": 274,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "友情",
+            "value": 274,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "早安",
+            "value": 274,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "小猫",
+            "value": 274,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "休息",
+            "value": 274,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "不了",
+            "value": 273,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "满满",
+            "value": 273,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "感恩",
+            "value": 273,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "纪伯宰",
+            "value": 273,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "作者",
+            "value": 273,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "医疗",
+            "value": 273,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "效果",
+            "value": 273,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "帅气",
+            "value": 273,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "回家",
+            "value": 273,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "全世界",
+            "value": 273,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "设计",
+            "value": 273,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "看起来",
+            "value": 273,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "胜利",
+            "value": 272,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "收入",
+            "value": 272,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "方式",
+            "value": 272,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "投给",
+            "value": 272,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "意思",
+            "value": 272,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "计划",
+            "value": 272,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "王者",
+            "value": 272,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "顶级",
+            "value": 272,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "陆雪琪",
+            "value": 272,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "不用",
+            "value": 272,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "建议",
+            "value": 272,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "风景",
+            "value": 272,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "养老",
+            "value": 272,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "全能",
+            "value": 272,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "青春",
+            "value": 272,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "表情",
+            "value": 272,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "冒险",
+            "value": 272,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "温馨",
+            "value": 271,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "博文",
+            "value": 271,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "友谊",
+            "value": 271,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "成为",
+            "value": 271,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "孙颖莎",
+            "value": 271,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "了解",
+            "value": 271,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "情绪",
+            "value": 271,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "小时候",
+            "value": 271,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "结婚",
+            "value": 270,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "小时",
+            "value": 270,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "只能",
+            "value": 270,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "女生",
+            "value": 270,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "意义",
+            "value": 270,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "父母",
+            "value": 270,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "相信",
+            "value": 270,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "表现",
+            "value": 270,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "治愈",
+            "value": 270,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "老板",
+            "value": 270,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "照片",
+            "value": 269,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "女人",
+            "value": 269,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "不想",
+            "value": 269,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "味道",
+            "value": 269,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "能力",
+            "value": 269,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "仙女",
+            "value": 269,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "颜值",
+            "value": 269,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "不是",
+            "value": 268,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "生命",
+            "value": 268,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "名字",
+            "value": 268,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "男人",
+            "value": 268,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "小说",
+            "value": 268,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "权威",
+            "value": 268,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "成就",
+            "value": 268,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "医生",
+            "value": 268,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "师姐",
+            "value": 268,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "羡慕",
+            "value": 268,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "情况",
+            "value": 268,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "棒棒",
+            "value": 268,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "收到",
+            "value": 268,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "理解",
+            "value": 267,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "眼神",
+            "value": 267,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "小孩",
+            "value": 267,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "京东",
+            "value": 267,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "陈梦",
+            "value": 267,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "表态",
+            "value": 267,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "画面",
+            "value": 267,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "头发",
+            "value": 267,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "关系",
+            "value": 267,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "现场",
+            "value": 267,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "王鹤",
+            "value": 267,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "技术",
+            "value": 267,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "社会主义",
+            "value": 267,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "就业",
+            "value": 267,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "哈哈哈",
+            "value": 267,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "爸爸",
+            "value": 267,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "赵露思",
+            "value": 267,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "减肥",
+            "value": 266,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "创造",
+            "value": 266,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "摩登",
+            "value": 266,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "小狗",
+            "value": 266,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "迪丽",
+            "value": 266,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "确实",
+            "value": 266,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "选择",
+            "value": 266,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "方法",
+            "value": 266,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "房子",
+            "value": 266,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "太萌",
+            "value": 266,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "链接",
+            "value": 265,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "哪吒",
+            "value": 265,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "美女",
+            "value": 265,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "才能",
+            "value": 265,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "激情",
+            "value": 265,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "努力",
+            "value": 265,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "碧瑶",
+            "value": 265,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "上班",
+            "value": 264,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "眼泪",
+            "value": 264,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "创作",
+            "value": 264,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "奔跑",
+            "value": 264,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "记得",
+            "value": 264,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "试试",
+            "value": 264,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "唱歌",
+            "value": 264,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "社会",
+            "value": 264,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "不到",
+            "value": 264,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "猫猫",
+            "value": 264,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "改变",
+            "value": 263,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "欧洲",
+            "value": 263,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "氛围",
+            "value": 263,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "人类",
+            "value": 263,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "超越",
+            "value": 263,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "玫瑰",
+            "value": 263,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "颜色",
+            "value": 263,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "令人",
+            "value": 263,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "遇到",
+            "value": 263,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "宇宙",
+            "value": 263,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "现实",
+            "value": 262,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "儿子",
+            "value": 262,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "镜头",
+            "value": 262,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "表达",
+            "value": 262,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "丁禹",
+            "value": 262,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "医院",
+            "value": 262,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "宝子",
+            "value": 262,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "拥有",
+            "value": 262,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "跟着",
+            "value": 262,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "还是",
+            "value": 262,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "赵丽颖",
+            "value": 262,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "铭记",
+            "value": 262,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "我会",
+            "value": 262,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "女主",
+            "value": 262,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "北京",
+            "value": 262,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "宣传",
+            "value": 262,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "长大",
+            "value": 261,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "情感",
+            "value": 261,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "陪伴",
+            "value": 261,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "天才",
+            "value": 261,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "注意",
+            "value": 261,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "吴宣仪",
+            "value": 261,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "东极岛",
+            "value": 261,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "无限",
+            "value": 261,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "玩家",
+            "value": 261,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "红烨",
+            "value": 261,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "生日快乐",
+            "value": 261,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "夏天",
+            "value": 261,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "有没有",
+            "value": 261,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "享受",
+            "value": 261,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "樊振东",
+            "value": 261,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "屏幕",
+            "value": 260,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "宋妍",
+            "value": 260,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "上海",
+            "value": 260,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "印度",
+            "value": 260,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "干嘛",
+            "value": 260,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "荣耀",
+            "value": 260,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "我们",
+            "value": 260,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "准备",
+            "value": 260,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "一定",
+            "value": 260,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "道理",
+            "value": 260,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "热血",
+            "value": 260,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "学会",
+            "value": 260,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "女子",
+            "value": 260,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "广州",
+            "value": 260,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "不要",
+            "value": 260,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "一直",
+            "value": 260,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "很多",
+            "value": 259,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "鹿晗",
+            "value": 259,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "维权",
+            "value": 259,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "开放",
+            "value": 259,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "身材",
+            "value": 259,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "女儿",
+            "value": 259,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "队友",
+            "value": 259,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "军人",
+            "value": 259,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "超棒",
+            "value": 259,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "旅程",
+            "value": 259,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "带来",
+            "value": 259,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "明白",
+            "value": 259,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "礼貌",
+            "value": 259,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "小米",
+            "value": 259,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "公主",
+            "value": 259,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "卧槽",
+            "value": 259,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "自信",
+            "value": 259,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "活动",
+            "value": 259,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "喜悦",
+            "value": 259,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "好好看",
+            "value": 259,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "办法",
+            "value": 258,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "大使",
+            "value": 258,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "直接",
+            "value": 258,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "阿荡",
+            "value": 258,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "王俊凯",
+            "value": 258,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "系统",
+            "value": 258,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "见面",
+            "value": 258,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "基本",
+            "value": 258,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "平台",
+            "value": 258,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "晚上",
+            "value": 258,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "华晨",
+            "value": 258,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "作品",
+            "value": 258,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "妈呀",
+            "value": 258,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "市场",
+            "value": 258,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "看见",
+            "value": 258,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "社保",
+            "value": 257,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "才华",
+            "value": 257,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "理想",
+            "value": 257,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "养车",
+            "value": 257,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "实用",
+            "value": 257,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "传递",
+            "value": 257,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "朱一龙",
+            "value": 257,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "功能",
+            "value": 257,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "苹果",
+            "value": 257,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "特别",
+            "value": 257,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "变成",
+            "value": 256,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "学校",
+            "value": 256,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "神仙",
+            "value": 256,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "非常",
+            "value": 256,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "学到",
+            "value": 256,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "这么",
+            "value": 256,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "原因",
+            "value": 256,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "工后",
+            "value": 256,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "墨香",
+            "value": 256,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "区别",
+            "value": 256,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "动人",
+            "value": 256,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "真棒",
+            "value": 256,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "美甲",
+            "value": 256,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "今天",
+            "value": 256,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "声音",
+            "value": 255,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "气质",
+            "value": 255,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "战争",
+            "value": 255,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "空调",
+            "value": 255,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "专业",
+            "value": 255,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "狗狗",
+            "value": 255,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "愿意",
+            "value": 255,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "帅哥",
+            "value": 255,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "许凯",
+            "value": 255,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "男主",
+            "value": 255,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "奶奶",
+            "value": 255,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "董事长",
+            "value": 255,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "回来",
+            "value": 255,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "王楚",
+            "value": 255,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "脑子",
+            "value": 255,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "樱桃",
+            "value": 255,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "诱人",
+            "value": 255,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "实在",
+            "value": 254,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "壁纸",
+            "value": 254,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "价格",
+            "value": 254,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "回忆",
+            "value": 254,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "小猫咪",
+            "value": 254,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "宋亚轩",
+            "value": 254,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "时尚",
+            "value": 254,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "绝色",
+            "value": 254,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "旅行",
+            "value": 254,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "保持",
+            "value": 254,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "说话",
+            "value": 254,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "企业",
+            "value": 254,
+            "textStyle": {
+                "color": "#2F4F4F"
+            }
+        },
+        {
+            "name": "吴艳妮",
+            "value": 254,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "吃饭",
+            "value": 253,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "专注",
+            "value": 253,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "告诉",
+            "value": 253,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "好好",
+            "value": 253,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "文字",
+            "value": 253,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "属于",
+            "value": 253,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "搞笑",
+            "value": 253,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        },
+        {
+            "name": "王玉雯",
+            "value": 253,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "大学",
+            "value": 253,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "百目",
+            "value": 253,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "妖君",
+            "value": 253,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "永远",
+            "value": 253,
+            "textStyle": {
+                "color": "#708090"
+            }
+        },
+        {
+            "name": "这样",
+            "value": 253,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "汪苏",
+            "value": 253,
+            "textStyle": {
+                "color": "#696969"
+            }
+        },
+        {
+            "name": "灵魂",
+            "value": 252,
+            "textStyle": {
+                "color": "#A0522D"
+            }
+        },
+        {
+            "name": "信念",
+            "value": 252,
+            "textStyle": {
+                "color": "#8B4513"
+            }
+        }
+    ],
+    "top_articles_by_interaction": [
+        {
+            "typename": "时尚",
+            "content": "📷💛 ​",
+            "author": "田栩宁_",
+            "interaction_score": 7003162,
+            "tag_color": "#4fc3f7"
+        },
+        {
+            "typename": "明星",
+            "content": "期待吧🤩！A REDWOOD STAR即将 “惊艳”登场 📷💄@DIOR迪奥 \n#迪奥烈艳蓝金惊艳唇膏##390红毯巨星# ​",
+            "author": "Dear-迪丽热巴",
+            "interaction_score": 4043936,
+            "tag_color": "#4db6ac"
+        },
+        {
+            "typename": "榜单",
+            "content": "我觉着挺cool 😏 #微博奇遇记# ​",
+            "author": "Dear-迪丽热巴",
+            "interaction_score": 3505436,
+            "tag_color": "#f782c2"
+        },
+        {
+            "typename": "榜单",
+            "content": "挑战 突破 http://t.cn/A6FEcg5B ​",
+            "author": "UNIQ-王一博",
+            "interaction_score": 3074656,
+            "tag_color": "#ff6b6b"
+        }
+    ],
+    "hot_trends": [
+        {
+            "typename": "明星",
+            "total_interaction": 77666173,
+            "example_text": "期待吧🤩！A REDWOOD STAR即将 “惊艳”登场 📷💄@DIOR迪奥 \n#迪奥烈艳蓝金惊艳唇膏##390红毯巨星# ​"
+        },
+        {
+            "typename": "综艺",
+            "total_interaction": 22796251,
+            "example_text": "嗦意面这一块。我贝吉塔家族承包了。#地球超新鲜# http://t.cn/A6swsxBG ​"
+        },
+        {
+            "typename": "时尚",
+            "total_interaction": 11799705,
+            "example_text": "📷💛 ​"
+        },
+        {
+            "typename": "音乐",
+            "total_interaction": 8378077,
+            "example_text": "咦，我相册里的视频怎么自动上传了？[阴险]#五月天# http://t.cn/A6s3CbO7 ​"
+        }
+    ],
+    "key_propagators": [
+        {
+            "authorName": "田栩宁_",
+            "influence_score": 9793699,
+            "details": {
+                "article_likes": 5742121,
+                "article_comments": 590259,
+                "comment_likes": 0
+            }
+        },
+        {
+            "authorName": "Dear-迪丽热巴",
+            "influence_score": 9562626,
+            "details": {
+                "article_likes": 4936592,
+                "article_comments": 1078869,
+                "comment_likes": 0
+            }
+        },
+        {
+            "authorName": "TOP登陆少年-苏新皓",
+            "influence_score": 7597510,
+            "details": {
+                "article_likes": 4788920,
+                "article_comments": 207065,
+                "comment_likes": 0
+            }
+        },
+        {
+            "authorName": "TOP登陆少年-朱志鑫",
+            "influence_score": 6213293,
+            "details": {
+                "article_likes": 3426689,
+                "article_comments": 536630,
+                "comment_likes": 0
+            }
+        }
+    ]
+}
